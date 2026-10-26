@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clock-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f1f5f9;
+}
+
+.clock-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.clock-icon {
+  margin-bottom: 12px;
+  font-size: 42px;
+}
+
+.clock-card h1 {
+  margin: 0 0 10px;
+  color: #1e293b;
+  font-size: 30px;
+}
+
+.subtitle {
+  margin-bottom: 28px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.clock-display {
+  padding: 28px 15px;
+  border-radius: 12px;
+  background: #1e293b;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.live-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.time {
+  margin: 20px 0;
+  color: #ffffff;
+  font-size: clamp(28px, 6vw, 42px);
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+}
+
+.date {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.info-box {
+  padding: 15px 8px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.info-box > span {
+  font-size: 23px;
+}
+
+.info-box h3 {
+  margin: 8px 0 5px;
+  color: #334155;
+  font-size: 13px;
+}
+
+.info-box p {
+  margin: 0;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.footer-text {
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .clock-card {
+    padding: 24px 15px;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+}
